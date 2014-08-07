@@ -11,7 +11,14 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140806151600) do
+ActiveRecord::Schema.define(version: 20140807103600) do
+
+  create_table "achievements", force: true do |t|
+    t.integer  "skill_id"
+    t.boolean  "mastered"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "skills", force: true do |t|
     t.string  "name"
